@@ -8,6 +8,16 @@
   height: 100vh;
 }
 
+.side-set2 {
+  background-color: chartreuse;
+  height: 100px;
+}
+
+.side-set3 {
+  background-color: cornflowerblue;
+  height: 100px;
+}
+
 .main-set1 {
   background-color: bisque;
   width: calc(100vw - 300px);
