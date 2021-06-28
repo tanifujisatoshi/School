@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_27_101852) do
+ActiveRecord::Schema.define(version: 2021_06_28_131043) do
+
+  create_table "lunches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.text "soup", null: false
+    t.text "staple_food", null: false
+    t.text "main_dish", null: false
+    t.text "side_dish", null: false
+    t.text "drink", null: false
+    t.text "other", null: false
+    t.date "menu_date", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_lunches_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +40,5 @@ ActiveRecord::Schema.define(version: 2021_06_27_101852) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "lunches", "users"
 end
