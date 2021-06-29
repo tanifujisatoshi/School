@@ -3,9 +3,17 @@ class LunchesController < ApplicationController
     
   end
 
+  def new
+
+  end
+
+  def create
+
+  end
+
   def destroy
-    lunch = Pr.find(params[:id])
-     if prototype.destroy
+    lunch = Lunch.find(params[:id])
+     if lunch.destroy
        redirect_to root_path
      end
    end
