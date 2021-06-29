@@ -11,5 +11,6 @@ class Lunch < ApplicationRecord
   validates :drink, presence: true
   validates :other, presence: true
   validates :menu_date, presence: true
+  validates :image, presence: true
   
 end
