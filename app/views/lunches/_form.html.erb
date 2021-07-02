@@ -1,0 +1,47 @@
+<%= form_with model: @lunch, local: true do |f|%>
+
+ <div class="field">
+    <%= f.label :image, "献立のおすすめの画像" %><br />
+    <%= f.file_field :image, id:"lunch_image" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :menu_date, "その献立の日にち" %><br />
+    <%= f.text_field :menu_date, id:"lunch_menu_date" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :soup, "汁物" %><br />
+    <%= f.text_area :soup, class: :form__text, id:"lunch_soup" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :staple_food, "主食" %><br />
+    <%= f.text_area :staple_food, class: :form__text, id:"lunch_staple_food" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :main_dish, "主菜" %><br />
+    <%= f.text_area :main_dish, class: :form__text, id:"lunch_main_dish" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :side_dish, "副菜" %><br />
+    <%= f.text_area :side_dish, class: :form__text, id:"lunch_side_dish" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :drink, "飲み物" %><br />
+    <%= f.text_area :drink, class: :form__text, id:"lunch_drink" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :other, "その他" %><br />
+    <%= f.text_area :other, class: :form__text, id:"lunch_other" %>
+  </div>
+  
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
