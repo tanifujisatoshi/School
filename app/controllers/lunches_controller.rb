@@ -4,12 +4,17 @@ class LunchesController < ApplicationController
   end
 
   def new
-
+    @lunch = Lunch.new 
   end
 
   def create
-
-  end
+    @lunch = Lunch.new(lunch_params)
+    if @lunch.save
+        redirect_to root_path
+    else  
+     render :new
+    end
+   end
 
   def destroy
     lunch = Lunch.find(params[:id])
