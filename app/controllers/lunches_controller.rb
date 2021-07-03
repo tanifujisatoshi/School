@@ -22,6 +22,14 @@ class LunchesController < ApplicationController
     end
    end
 
+   def edit
+
+   end
+
+   def update
+    
+   end
+
   def destroy
     lunch = Lunch.find(params[:id])
      if lunch.destroy
