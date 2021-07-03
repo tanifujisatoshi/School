@@ -1,4 +1,8 @@
 class LunchesController < ApplicationController
+
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :move_to_index, only: [:edit]
+
   def index
     @lunches = Lunch.all
   end
@@ -46,6 +50,13 @@ class LunchesController < ApplicationController
 
    def lunch_params
     params.require(:lunch).permit(:soup, :staple_food, :main_dish, :side_dish, :drink, :other, :menu_date, :image).merge(user_id: current_user.id)
-  end 
+   end
+   
+   def move_to_index
+    @lunch = Lunch.find(params[:id])
+    unless current_user == @lunch.user
+     redirect_to action: :index
+    end
+  end
 
 end
