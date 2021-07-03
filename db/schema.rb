@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 2021_06_29_112223) do
   end
 
   create_table "lunches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.text "soup", null: false
-    t.text "staple_food", null: false
-    t.text "main_dish", null: false
-    t.text "side_dish", null: false
-    t.text "drink", null: false
-    t.text "other", null: false
-    t.date "menu_date", null: false
+    t.string "soup", null: false
+    t.string "staple_food", null: false
+    t.string "main_dish", null: false
+    t.string "side_dish", null: false
+    t.string "drink", null: false
+    t.string "other", null: false
+    t.string "menu_date", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2021_06_29_112223) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "name", null: false
-    t.text "occupation", null: false
+    t.string "occupation", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

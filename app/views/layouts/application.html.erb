@@ -17,7 +17,7 @@
           <% if user_signed_in? %>
              <div class="nav__right">
                <%= link_to "ログアウト", destroy_user_session_path, class: :nav__logout, method: :delete %>
-               <%= link_to "新しい献立", "#", class: :nav__btn, method: :get %>
+               <%= link_to "新しい献立", new_lunch_path, class: :nav__btn, method: :get %>
              </div> 
           <% else %>
             <div class="nav__right">
