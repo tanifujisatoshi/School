@@ -4,7 +4,9 @@ class LunchesController < ApplicationController
   end
 
   def show
-    
+    @lunch = Lunch.find(params[:id])
+    # @comment = Comment.new
+    # @comments = @prototype.comments.includes(:user)
   end
 
   def new
