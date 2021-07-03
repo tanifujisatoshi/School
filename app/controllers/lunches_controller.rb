@@ -9,7 +9,7 @@ class LunchesController < ApplicationController
 
   def create
     @lunch = Lunch.new(lunch_params)
-    if @lunch.save!
+    if @lunch.save
         redirect_to root_path
     else  
      render :new
