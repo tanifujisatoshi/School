@@ -23,11 +23,16 @@ class LunchesController < ApplicationController
    end
 
    def edit
-
+    @lunch = Lunch.find(params[:id])
    end
 
    def update
-    
+    @lunch = Lunch.find(params[:id])
+    if @lunch.update(lunch_params)
+       redirect_to  lunch_path
+    else
+      render :edit
+    end
    end
 
   def destroy
