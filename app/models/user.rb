@@ -8,5 +8,5 @@ class User < ApplicationRecord
   validates :occupation, presence: true
        
   has_many :lunches
-  has_many :comments
+  # has_many :comments
 end
