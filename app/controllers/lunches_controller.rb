@@ -3,6 +3,10 @@ class LunchesController < ApplicationController
     @lunches = Lunch.all
   end
 
+  def show
+    
+  end
+
   def new
     @lunch = Lunch.new 
   end
