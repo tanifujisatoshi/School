@@ -13,14 +13,16 @@
     <header class="header">
       <div class="inner">
         <div class="nav">
-          <div class="nav__right">
-            <%= link_to "トップページに戻る", root_path %>
-          </div>   
+          <div class="nav__left">
+            <%= link_to "トップページに戻る", root_path, class: :nav__btn1 %>
+          </div>
          </div>
           <% if user_signed_in? %>
              <div class="nav__right">
                <%= link_to "ログアウト", destroy_user_session_path, class: :nav__logout, method: :delete %>
+             <% if current_user.id == 1 %>  
                <%= link_to "新しい献立", new_lunch_path, class: :nav__btn, method: :get %>
+             <% end %>
              </div> 
           <% else %>
             <div class="nav__right">

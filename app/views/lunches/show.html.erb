@@ -1,7 +1,7 @@
 <main class="main">
   <div class="inner">
-    <div class="lunch__wrapper">
-      <p class="lunch__hedding">
+    <div class="prototype__wrapper">
+      <p class="prototype__hedding">
         <%= @lunch.menu_date %>
       </p>
       <%= link_to @lunch.user.name, user_path(@lunch.user.id), class: :prototype__user %>
@@ -16,6 +16,7 @@
         <%= image_tag @lunch.image %>
       </div>
       <div class="prototype__body">
+       <div class>
         <div class="prototype__detail">
           <p class="detail__title">汁物</p>
           <p class="detail__message">

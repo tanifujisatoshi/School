@@ -1,16 +1,16 @@
 class Lunch < ApplicationRecord
-
   belongs_to :user
   has_many :comments, dependent: :destroy
   has_one_attached :image
 
-  validates :soup, presence: true
-  validates :staple_food, presence: true
-  validates :main_dish, presence: true
-  validates :side_dish, presence: true
-  validates :drink, presence: true
-  validates :other, presence: true
-  validates :menu_date, presence: true
-  validates :image, presence: true
-  
+  with_options presence: true do
+    validates :soup
+    validates :staple_food
+    validates :main_dish
+    validates :side_dish
+    validates :drink
+    validates :other
+    validates :menu_date
+    validates :image
+  end
 end

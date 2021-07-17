@@ -13,11 +13,13 @@ p,
 div {
   margin: 0;
   padding: 0;
+  color: darkmagenta;
 }
 
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
+  color: orange;
+  background-color: orange;
 }
 
 li {
@@ -31,13 +33,13 @@ img {
 
 a {
   text-decoration: none;
-  color: #3b4043;
+  color: red;
 }
 
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: palegreen;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -59,12 +61,21 @@ a {
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #87CEFA;
-  text-decoration: none;
-  user-select: none;
+  /* text-decoration: none;
+  user-select: none; */
   border: 1px #87CEFA solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
+  /* border-radius: 3px;
+  transition: 0.4s ease; */
 }
+.nav__btn1 {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #87CEFA;
+  border: 1px #87CEFA solid;
+  margin-bottom: 20px;
+}
+
 .nav__btn:hover{
   color: #fff;
   background: #87CEFA;
@@ -75,8 +86,9 @@ a {
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #87CEFA;
-  text-decoration: none;
-  user-select: none;
+  /* text-decoration: none;
+  user-select: none; */
+  border: 1px #87CEFA solid;
 }
 .nav__logout:hover{
   opacity: 0.5;
@@ -94,6 +106,39 @@ a {
 .field{
   margin: 10px 0;
 }
+
+.youtien{
+  margin-left: 60px;
+}
+
+.syougakkou{
+  margin-right: 50px;
+}
+
+.tyugakusei{
+  margin-left: 60px;
+}
+
+.lunch1{
+  text-align: right;
+  /* margin-top: -100px; */
+}
+
+.lunch2{
+  text-align: left;
+  margin-right: 50px;
+   margin-top: -1170px; 
+}
+
+.field_memo{
+  margin-right: -1000px;
+}
+
+
+
+
+
+
 
 .actions{
   margin-bottom: 40px;
@@ -143,6 +188,8 @@ a {
 }
 .card__img {
   margin-bottom: 16px;
+  width: 300px;
+  height: 300px;
 }
 .card__title {
   display: block;
@@ -155,17 +202,17 @@ a {
 }
 .card__user {
   display: block;
-  font-size: 12px;
-  color: #999;
+  /* font-size: 12px; */
+  color: palevioletred;
   text-align: right;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 /* 詳細ページ */
-.lunch__wrapper{
+.prototype__wrapper{
   min-height: calc(100vh - 161px);
 }
-.lunch__hedding{
+.prototype__hedding{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
@@ -181,6 +228,7 @@ a {
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
+
 }
 .prototype__detail{
   display: flex;
@@ -200,13 +248,13 @@ a {
 .prototype__btn{
   display: block;
   padding: 0.4em 1.6em;
-  font-size: 0.4em;
+  /* font-size: 0.4em;
   color: #999;
   text-decoration: none;
-  user-select: none;
+  user-select: none; */
   border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
+  /* border-radius: 3px;
+  transition: 0.4s ease; */
   margin: 0 4px;
 }
 .prototype__btn:hover{
@@ -215,7 +263,7 @@ a {
 }
 
 .prototype__comments{
-  background-color: #f6f6f6;
+  background-color: greenyellow;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
@@ -321,3 +369,166 @@ a {
     width: 100%;
   }
 }
+
+.registration-main {
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+}
+
+/* form-wrapは商品購入画面でも使用しています */
+.form-wrap {
+  width: 50%;
+  background-color: white;
+  padding-bottom: 70px;
+}
+
+.form-header {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.form-header-text {
+  line-height: 100px;
+  border-bottom: 1px solid #f5f5f5;
+  font-weight: bold;
+}
+
+.form-group {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.form-group:first-child {
+  padding: 0;
+}
+
+.form-text-wrap {
+  width: 100%;
+  height: 20%;
+}
+
+.form-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.input-default {
+  width: 100%;
+  margin-top: 5px;
+  height: 48px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 16px;
+  resize: none;
+}
+
+.info-text {
+  color: #888;
+  font-size: 15px;
+  margin-top: 3px;
+}
+
+.form-info-header {
+  font-weight: bold;
+}
+
+.form-info-text {
+  font-size: 15px;
+}
+
+.input-name-wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.input-name {
+  width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 48px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  resize: none;
+}
+
+.input-birth-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-birth-wrap select {
+  width: 75px;
+  margin-top: 5px;
+  height: 45px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.input-birth-wrap p {
+  line-height: 60px;
+  padding: 0 5px;
+}
+
+.field_with_errors {
+  display: contents;
+}
+
+
+.form-bottom-text {
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-bottom-text:last-child {
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+.form-bottom-text>span {
+  color: #0099e8;
+  cursor: pointer;
+}
+
+.register-btn {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.register-red-btn {
+  width: 100%;
+  background: #ea352d;
+  border: 1px solid #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.register-info {
+  margin: 30px 180px 0 0;
+  color: #0099e8;
+  text-align: right;
+  cursor: pointer;
+}
+
+
